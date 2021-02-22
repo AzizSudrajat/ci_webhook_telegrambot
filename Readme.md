@@ -9,4 +9,4 @@ Build Webhook For Telegram bot
 
 ## How to Use
 - Deploy on Heroku
-- Register webhook on SetWebhook on api.telegram.com
+- Register webhook on SetWebhook on api.telegram.com (https://api.telegram.org/bot{token}/setWebhook?url={url-webhook})
