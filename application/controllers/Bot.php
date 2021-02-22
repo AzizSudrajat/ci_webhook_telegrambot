@@ -19,6 +19,14 @@ class Bot extends CI_Controller {
         }else if(strpos($message, "/mulai") === 0){
           $text = 'Tunggu beberapa saat, Operator Kami Akan Menghubungi kamu, Chat Id kamu adalah '.$chatID;
           file_get_contents($apiURL."/sendmessage?chat_id=".$chatID."&text=".$text);
+        }else if(strpos($message, "/lapor") === 0){
+          $text = 'Silakan masukan laporan ada di bawah ini, tandai dengan ketik/klik : /selesai';
+          file_get_contents($apiURL."/sendmessage?chat_id=".$chatID."&text=".$text);
+        }else if(strpos($message, "/selesai") === 0){
+          $text = 'Terima Kasih sudah menghubungi kami.';
+          file_get_contents($apiURL."/sendmessage?chat_id=".$chatID."&text=".$text);
+        }else if(strpos($message, "/end") === 0){
+
         }
     }
 
