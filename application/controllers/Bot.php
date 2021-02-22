@@ -14,11 +14,11 @@ class Bot extends CI_Controller {
         $message = $update["message"]["text"];
 
         if (strpos($message, "/start") === 0) {
-          $text = 'Hai Selamat datang di Contact Center NTTI DBS. Apabila Ingin berbicara dengan operator ketik "Mulai"'
+          $text = 'Hai Selamat datang di Contact Center NTTI DBS. Apabila Ingin berbicara dengan operator ketik /mulai'
           file_get_contents($apiURL."/sendmessage?chat_id=".$chatID."&text=".$text);
-        }else if(strpos($message, "/mulai") === 0){
-          $text = 'Tunggu beberapa saat, Operator Kami Akan Menghubungi kamu, Chat Id kamu adalah '.$chatID;
-          file_get_contents($apiURL."/sendmessage?chat_id=".$chatID."&text=".$text);
+        // }else if(strpos($message, "/mulai") === 0){
+        //   $text = 'Tunggu beberapa saat, Operator Kami Akan Menghubungi kamu, Chat Id kamu adalah '.$chatID;
+        //   file_get_contents($apiURL."/sendmessage?chat_id=".$chatID."&text=".$text);
         }
     }
 
